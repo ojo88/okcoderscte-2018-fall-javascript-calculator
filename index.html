@@ -3,43 +3,49 @@
         <title>
             Calculator
         </title>
-
     </header>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="./style.css" type="text/css" rel="stylesheet">
     <body>
-        <ul>
-            <li>
-                <input type="text" id="display"/>
-            </li>
-            <li>
-                <button onclick="showDisplay()" id="allClear">AC</button>
-                <button onclick="showDisplay()" id="magnitude">+/-</button>
-                <button onclick="showDisplay()" id="percent">%</button>
-                <button onclick="showDisplay()" id="divide">÷</button>
-            </li>
-            <li>
-                <button onclick="showDisplay()" id="sevenB">7</button>
-                <button onclick="showDisplay()" id="eightB">8</button>
-                <button onclick="showDisplay()" id="nineB">9</button>
-                <button onclick="showDisplay()" id="multiply">x</button>
-            </li>
-            <li>
-                <button onclick="showDisplay()" id="fourB">4</button>
-                <button onclick="showDisplay()" id="fiveB">5</button>
-                <button onclick="showDisplay()" id="sixB">6</button>
-                <button onclick="showDisplay()" id="subtract">-</button>
-            </li>
-            <li>
-                <button onclick="showDisplay()" id="oneB">1</button>
-                <button onclick="showDisplay()" id="twoB">2</button>
-                <button onclick="showDisplay()" id="threeB">3</button>
-                <button onclick="showDisplay()" id="addition">+</button>
-            </li>
-            <li>
-                <button onclick="showDisplay()" id="zeroB">    0</button>
-                <button onclick="showDisplay()" id="decimalB">.</button>
-                <button onclick="showDisplay()" id="equalB">=</button>
-            </li>
-        </ul>
+        <div class="calc">
+            <ul>
+                <li>
+                    <input type="text" id="display"/>
+                </li>
+                <li>
+                    <button onclick="showDisplay()" id="allClear">AC</button>
+                    <button onclick="showDisplay()" id="magnitude">+/-</button>
+                    <button onclick="showDisplay()" id="percent">%</button>
+                    <button onclick="showDisplay()" id="divide">÷</button>
+                </li>
+                <li>
+                    <button onclick="showDisplay()" id="sevenB">7</button>
+                    <button onclick="showDisplay()" id="eightB">8</button>
+                    <button onclick="showDisplay()" id="nineB">9</button>
+                    <button onclick="showDisplay()" id="multiply">x</button>
+                </li>
+                <li>
+                    <button onclick="showDisplay()" id="fourB">4</button>
+                    <button onclick="showDisplay()" id="fiveB">5</button>
+                    <button onclick="showDisplay()" id="sixB">6</button>
+                    <button onclick="showDisplay()" id="subtract">-</button>
+                </li>
+                <li>
+                    <button onclick="showDisplay()" id="oneB">1</button>
+                    <button onclick="showDisplay()" id="twoB">2</button>
+                    <button onclick="showDisplay()" id="threeB">3</button>
+                    <button onclick="showDisplay()" id="addition">+</button>
+                </li>
+                <li>
+                    <button onclick="showDisplay()" id="zeroB">    0</button>
+                    <button onclick="showDisplay()" id="decimalB">.</button>
+                    <button onclick="showDisplay()" id="equalB">=</button>
+                </li>
+            </ul>
+        </div>
     </body>
     <script src="calculator.js"></script>
 </html>
