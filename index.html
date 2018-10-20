@@ -93,19 +93,23 @@
             }
         else if(value === 'perc')
             {
+                    numOne = parseFloat(display.innerHTML) / 100; 
+                    display.innerHTML = "" + numOne;
 
             }
         else if(value === 'add')
             {
                 if(addBit === 1)
                 {
-                    numOne = parseInt(display.innerHTML, 10) + numOne; 
+                    //numOne = parseInt(display.innerHTML, 10) + numOne; 
+                    numOne = parseFloat(display.innerHTML) + numOne;
                     display.innerHTML = "" + numOne;
                     clearBit = 1;
                 }
                 else
                 {
-                    numOne = parseInt(display.innerHTML, 10);
+                    //numOne = parseInt(display.innerHTML, 10);
+                    numOne = parseFloat(display.innerHTML) + numOne;
                     addBit = 1;
                     clearBit = 1;
                 }
@@ -115,13 +119,13 @@
             {
                 if(subBit === 1)
                 {
-                    numOne = parseInt(display.innerHTML, 10) - numOne; 
+                    numOne = parseFloat(display.innerHTML) - numOne; 
                     display.innerHTML = "" + numOne;
                     clearBit = 1;
                 }
                 else
                 {
-                    numOne = parseInt(display.innerHTML, 10);
+                    numOne = parseFloat(display.innerHTML);
                     subBit = 1;
                     clearBit = 1;
                 }
@@ -131,13 +135,13 @@
             {
                 if(divBit === 1)
                 {
-                    numOne = parseInt(display.innerHTML, 10) / numOne; 
+                    numOne = parseFloat(display.innerHTML) / numOne; 
                     display.innerHTML = "" + numOne;
                     clearBit = 1;
                 }
                 else
                 {
-                    numOne = parseInt(display.innerHTML, 10);
+                    numOne = parseFloat(display.innerHTML);
                     divBit = 1;
                     clearBit = 1;
                 }
@@ -146,13 +150,13 @@
             {
                 if(multBit === 1)
                 {
-                    numOne = parseInt(display.innerHTML, 10) * numOne; 
+                    numOne = parseFloat(display.innerHTML) * numOne; 
                     display.innerHTML = "" + numOne;
                     clearBit = 1;
                 }
                 else
                 {
-                    numOne = parseInt(display.innerHTML, 10);
+                    numOne = parseFloat(display.innerHTML);
                     multBit = 1;
                     clearBit = 1;
                 }
@@ -165,7 +169,8 @@
             }
         else if(value === 'equal')
             {
-                numTwo = parseInt(display.innerHTML, 10);
+                //numTwo = parseInt(display.innerHTML, 10);
+                numTwo = parseFloat(display.innerHTML);
 
                 if(addBit === 1)
                 {
