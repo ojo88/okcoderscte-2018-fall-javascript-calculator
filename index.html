@@ -12,40 +12,49 @@
     <body>
         <div class="calc">
             <ul>
-                <li>
-                    <input type="text" id="display"/>
+                <li id="display">
+                   0. <!-- <input type="text" id="display"/> -->
                 </li>
                 <li>
-                    <button onclick="showDisplay()" id="allClear">AC</button>
-                    <button onclick="showDisplay()" id="magnitude">+/-</button>
-                    <button onclick="showDisplay()" id="percent">%</button>
-                    <button onclick="showDisplay()" id="divide">÷</button>
+                    <button onclick="inputAction()" id="allClear">AC</button>
+                    <button onclick="inputAction()" id="magnitude">+/-</button>
+                    <button onclick="inputAction()" id="percent">%</button>
+                    <button onclick="inputAction()" id="divide">÷</button>
                 </li>
                 <li>
-                    <button onclick="showDisplay()" id="sevenB">7</button>
-                    <button onclick="showDisplay()" id="eightB">8</button>
-                    <button onclick="showDisplay()" id="nineB">9</button>
-                    <button onclick="showDisplay()" id="multiply">x</button>
+                    <button onclick="inputAction(7)" id="sevenB">7</button>
+                    <button onclick="inputAction(8)" id="eightB">8</button>
+                    <button onclick="inputAction(9)" id="nineB">9</button>
+                    <button onclick="inputAction()" id="multiply">x</button>
                 </li>
                 <li>
-                    <button onclick="showDisplay()" id="fourB">4</button>
-                    <button onclick="showDisplay()" id="fiveB">5</button>
-                    <button onclick="showDisplay()" id="sixB">6</button>
-                    <button onclick="showDisplay()" id="subtract">-</button>
+                    <button onclick="inputAction(4)" id="fourB">4</button>
+                    <button onclick="inputAction(5)" id="fiveB">5</button>
+                    <button onclick="inputAction(6)" id="sixB">6</button>
+                    <button onclick="inputAction()" id="subtract">-</button>
                 </li>
                 <li>
-                    <button onclick="showDisplay()" id="oneB">1</button>
-                    <button onclick="showDisplay()" id="twoB">2</button>
-                    <button onclick="showDisplay()" id="threeB">3</button>
-                    <button onclick="showDisplay()" id="addition">+</button>
+                    <button onclick="inputAction(1)" id="oneB">1</button>
+                    <button onclick="inputAction(2)" id="twoB">2</button>
+                    <button onclick="inputAction(3)" id="threeB">3</button>
+                    <button onclick="inputAction()" id="addition">+</button>
                 </li>
                 <li>
-                    <button onclick="showDisplay()" id="zeroB">    0</button>
-                    <button onclick="showDisplay()" id="decimalB">.</button>
-                    <button onclick="showDisplay()" id="equalB">=</button>
+                    <button onclick="inputAction()" id="zeroB">0</button>
+                    <button onclick="inputAction()" id="decimalB">.</button>
+                    <button onclick="inputAction()" id="equalB">=</button>
                 </li>
             </ul>
         </div>
     </body>
-    <script src="calculator.js"></script>
+    <script>
+        function inputAction (value) {
+        var display = document.getElementById("display");
+        
+
+        var curDisplay = display.innerHTML;
+        display.innerHTML = curDisplay + "" + value;
+        }
+
+    </script>
 </html>
