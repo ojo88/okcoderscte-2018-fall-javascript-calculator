@@ -12,37 +12,35 @@
     <body>
         <div class="calc">
             <ul>
-                <li id="display">
-                   0. <!-- <input type="text" id="display"/> -->
-                </li>
+                <li id="display">0.</li>
                 <li>
-                    <button onclick="inputAction()" id="allClear">AC</button>
-                    <button onclick="inputAction()" id="magnitude">+/-</button>
-                    <button onclick="inputAction()" id="percent">%</button>
-                    <button onclick="inputAction()" id="divide">÷</button>
+                    <button onclick="inputAction('clear')" id="allClear">AC</button>
+                    <button onclick="inputAction('negPos')" id="magnitude">+/-</button>
+                    <button onclick="inputAction('perc')" id="percent">%</button>
+                    <button onclick="inputAction('div')" id="divide">÷</button>
                 </li>
                 <li>
                     <button onclick="inputAction(7)" id="sevenB">7</button>
                     <button onclick="inputAction(8)" id="eightB">8</button>
                     <button onclick="inputAction(9)" id="nineB">9</button>
-                    <button onclick="inputAction()" id="multiply">x</button>
+                    <button onclick="inputAction('mult')" id="multiply">x</button>
                 </li>
                 <li>
                     <button onclick="inputAction(4)" id="fourB">4</button>
                     <button onclick="inputAction(5)" id="fiveB">5</button>
                     <button onclick="inputAction(6)" id="sixB">6</button>
-                    <button onclick="inputAction()" id="subtract">-</button>
+                    <button onclick="inputAction('sub')" id="subtract">-</button>
                 </li>
                 <li>
                     <button onclick="inputAction(1)" id="oneB">1</button>
                     <button onclick="inputAction(2)" id="twoB">2</button>
                     <button onclick="inputAction(3)" id="threeB">3</button>
-                    <button onclick="inputAction()" id="addition">+</button>
+                    <button onclick="inputAction('add')" id="addition">+</button>
                 </li>
                 <li>
-                    <button onclick="inputAction()" id="zeroB">0</button>
-                    <button onclick="inputAction()" id="decimalB">.</button>
-                    <button onclick="inputAction()" id="equalB">=</button>
+                    <button onclick="inputAction(0)" id="zeroB">0</button>
+                    <button onclick="inputAction('period')" id="decimalB">.</button>
+                    <button onclick="inputAction('equal')" id="equalB">=</button>
                 </li>
             </ul>
         </div>
@@ -50,10 +48,46 @@
     <script>
         function inputAction (value) {
         var display = document.getElementById("display");
-        
 
         var curDisplay = display.innerHTML;
-        display.innerHTML = curDisplay + "" + value;
+        if(display.innerHTML === '0.' || display.innerHTML === '-0.')
+            {
+                if(value < 10 && value > 0)
+                display.innerHTML = value;
+            }
+        else if(value === 'negPos')
+            {
+                display.innerHTML = "-" + curDisplay;
+            }
+        else if(value < 10 && value >= 0)
+            {
+                display.innerHTML = curDisplay + "" + value;
+            }
+        else if(value === 'clear')
+            {
+                display.innerHTML = "0."
+            }
+        else if(value === 'perc')
+            {
+
+            }
+        else if(value === 'add')
+            {
+
+            }
+        else if(value === 'sub')
+            {
+                
+            }
+        else if(value === 'div')
+            {
+                
+            }
+        else if(value === 'mult')
+            {
+                
+            }
+
         }
 
     </script>
