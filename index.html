@@ -113,15 +113,49 @@
             }
         else if(value === 'sub')
             {
+                if(subBit === 1)
+                {
+                    numOne = parseInt(display.innerHTML, 10) - numOne; 
+                    display.innerHTML = "" + numOne;
+                    clearBit = 1;
+                }
+                else
+                {
+                    numOne = parseInt(display.innerHTML, 10);
+                    subBit = 1;
+                    clearBit = 1;
+                }
                 
             }
         else if(value === 'div')
             {
-                
+                if(divBit === 1)
+                {
+                    numOne = parseInt(display.innerHTML, 10) / numOne; 
+                    display.innerHTML = "" + numOne;
+                    clearBit = 1;
+                }
+                else
+                {
+                    numOne = parseInt(display.innerHTML, 10);
+                    divBit = 1;
+                    clearBit = 1;
+                }
             }
         else if(value === 'mult')
             {
-                
+                if(multBit === 1)
+                {
+                    numOne = parseInt(display.innerHTML, 10) * numOne; 
+                    display.innerHTML = "" + numOne;
+                    clearBit = 1;
+                }
+                else
+                {
+                    numOne = parseInt(display.innerHTML, 10);
+                    multBit = 1;
+                    clearBit = 1;
+                }
             }
         else if(value === 'period')
             {
@@ -146,6 +180,20 @@
                     addBit = 0;
                     multBit = 0;
                     divBit = 0;
+                }
+                else if(multBit === 1)
+                {
+                    display.innerHTML = "" + (numOne * numTwo);
+                    addBit = 0;
+                    subBit = 0;
+                    divBit = 0;
+                }
+                else if(divBit === 1)
+                {
+                    display.innerHTML = "" + (numOne / numTwo);
+                    addBit = 0;
+                    multBit = 0;
+                    subBit = 0;
                 }
             }
 
