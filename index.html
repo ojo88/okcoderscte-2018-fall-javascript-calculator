@@ -57,7 +57,15 @@
             }
         else if(value === 'negPos')
             {
-                display.innerHTML = "-" + curDisplay;
+                if(display.innerHTML[0] === "-")
+                    {
+                        //.replace('-', '') will replace the '-' with an empty character
+                        display.innerHTML = display.innerHTML.replace('-', '');
+                    }
+                else if(display.innerHTML[0] !== "-")
+                    {
+                        display.innerHTML = "-" + curDisplay;
+                    }
             }
         else if(value < 10 && value >= 0)
             {
@@ -86,6 +94,12 @@
         else if(value === 'mult')
             {
                 
+            }
+        else if(value === 'period')
+            {
+             //need to make an array to index each character.
+             //if a '.' exists, ignore the command
+             //if a '.' does not exist, add a '.'   
             }
 
         }
